@@ -33,7 +33,7 @@ public class NetworkManager : MonoBehaviour {
 	}
 
 	void SpawnMyPlayer() {
-		PhotonNetwork.Instantiate ("PlayerController", Vector3.zero, Quaternion.identity, 0);
+		PhotonNetwork.Instantiate ("PlayerController", new Vector3(3,30,3), Quaternion.identity, 0);
 		standbyCamera.enabled = false;
 	}
 }
