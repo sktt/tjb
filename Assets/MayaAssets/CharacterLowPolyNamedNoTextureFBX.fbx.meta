@@ -1,38 +1,45 @@
 fileFormatVersion: 2
-guid: 243688d9f65f9d3409aac8792be4aa5f
+guid: cd7dc156da111fb4d91fed0c557c512f
 ModelImporter:
   serializedVersion: 15
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: pCube1
-    100004: pCylinder1
-    100006: pCylinder2
-    100008: pointLight1
-    100010: polySurface1
-    100012: polySurface2
-    100014: pPlane1
-    100016: transform1
-    100018: transform2
-    100020: transform3
-    100022: transform4
-    400000: //RootNode
-    400002: pCube1
-    400004: pCylinder1
-    400006: pCylinder2
-    400008: pointLight1
-    400010: polySurface1
-    400012: polySurface2
-    400014: pPlane1
-    400016: transform1
-    400018: transform2
-    400020: transform3
-    400022: transform4
-    2300000: polySurface2
-    2300002: pPlane1
-    3300000: polySurface2
-    3300002: pPlane1
-    4300000: polySurface2
-    4300002: pPlane1
+    100000: ArmLeft
+    100002: ArmRight
+    100004: //RootNode
+    100006: Head
+    100008: LegLeft
+    100010: LegRight
+    100012: Neck
+    100014: Torso
+    400000: ArmLeft
+    400002: ArmRight
+    400004: //RootNode
+    400006: Head
+    400008: LegLeft
+    400010: LegRight
+    400012: Neck
+    400014: Torso
+    2300000: ArmLeft
+    2300002: ArmRight
+    2300004: Head
+    2300006: LegLeft
+    2300008: LegRight
+    2300010: Neck
+    2300012: Torso
+    3300000: ArmLeft
+    3300002: ArmRight
+    3300004: Head
+    3300006: LegLeft
+    3300008: LegRight
+    3300010: Neck
+    3300012: Torso
+    4300000: Head
+    4300002: Neck
+    4300004: Torso
+    4300006: ArmLeft
+    4300008: ArmRight
+    4300010: LegLeft
+    4300012: LegRight
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -52,7 +59,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 100
+    globalScale: 20
     meshCompression: 0
     addColliders: 0
     importBlendShapes: 1
