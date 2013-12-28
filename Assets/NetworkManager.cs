@@ -16,27 +16,25 @@ public class NetworkManager : MonoBehaviour {
 	}
 
 	void OnGUI() {
-				GUILayout.Label( PhotonNetwork.connectionStateDetailed.ToString () );
+		GUILayout.Label( PhotonNetwork.connectionStateDetailed.ToString () );
 	}
 
 	void OnJoinedLobby() {
-				PhotonNetwork.JoinRandomRoom ();
-		}
+		PhotonNetwork.JoinRandomRoom ();
+	}
 
 	void OnPhotonRandomJoinFailed() {
-				PhotonNetwork.CreateRoom (null);
-		}
+		PhotonNetwork.CreateRoom (null);
+	}
 
 	void OnJoinedRoom() {
 		Debug.Log ("OnJoinedLobby");
-
 		SpawnMyPlayer ();
-
-		}
+	}
 
 	void SpawnMyPlayer() {
 		PhotonNetwork.Instantiate ("PlayerController", Vector3.zero, Quaternion.identity, 0);
 		standbyCamera.enabled = false;
-		}
+	}
 }
 
