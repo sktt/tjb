@@ -3,15 +3,16 @@ using System.Collections;
 
 public class NetworkManager : MonoBehaviour {
 
-	public Camera standbyCamera;	
+	public Camera standbyCamera;
 
 	// Use this for initialization
 	void Start () {
 		Connect ();
+		this.standbyCamera = GameObject.Find ("StandbyCamera").camera;
 	}
 
 	void Connect () {
-		PhotonNetwork.ConnectUsingSettings( "1.0.0" );
+		PhotonNetwork.ConnectUsingSettings( "1.0.1" );
 
 	}
 
@@ -33,7 +34,11 @@ public class NetworkManager : MonoBehaviour {
 	}
 
 	void SpawnMyPlayer() {
-		PhotonNetwork.Instantiate ("PlayerController", new Vector3(3,30,3), Quaternion.identity, 0);
+		GameObject playerGO = (GameObject)PhotonNetwork.Instantiate ("PlayerController", new Vector3(3,30,3), Quaternion.identity, 0);
+		((MonoBehaviour)playerGO.GetComponent("FPSInputController")).enabled = true;
+		((MonoBehaviour)playerGO.GetComponent("MouseLook")).enabled = true;
+		//Debug.Log (playerGO.transform.FindChild("Main Camera").gameObject.camera);
+		playerGO.transform.FindChild ("Main Camera").gameObject.SetActive(true);
 		standbyCamera.enabled = false;
 	}
 }
