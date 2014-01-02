@@ -37,6 +37,7 @@ public class NetworkManager : MonoBehaviour {
 		GameObject playerGO = (GameObject)PhotonNetwork.Instantiate ("PlayerChar", new Vector3(3,50,3), Quaternion.identity, 0);
 		((MonoBehaviour)playerGO.GetComponent("FPSInputController")).enabled = true;
 		((MonoBehaviour)playerGO.GetComponent("MouseLook")).enabled = true;
+		((MonoBehaviour)playerGO.GetComponent("CharacterMotor")).enabled = true;
 		//Debug.Log (playerGO.transform.FindChild("Main Camera").gameObject.camera);
 		playerGO.transform.FindChild ("Main Camera").gameObject.SetActive(true);
 		standbyCamera.enabled = false;
